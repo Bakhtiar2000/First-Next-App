@@ -1,10 +1,10 @@
-import React from "react";
+import Counter from "@/components/Counter/Counter";
 
 const HomePage = () => {
-  console.log("Home Page");
   return (
-    <div>
-      <h2 className="text-center mt-52 text-4xl">Welcome to First Next App</h2>
+    <div className="text-center mx-auto">
+      <h2 className="mt-52 text-4xl">Welcome to First Next App</h2>
+      <Counter />
     </div>
   );
 };
