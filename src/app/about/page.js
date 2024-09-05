@@ -1,7 +1,7 @@
-import React from "react";
+import Styles from "./About.module.css";
 
 const AboutPage = () => {
-  return <div className="text-center mt-52 text-4xl">About</div>;
+  return <div className={Styles.heading}>About</div>;
 };
 
 export default AboutPage;
