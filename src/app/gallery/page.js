@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import nextImage from "../../assets/image.png";
 const GalleryPage = () => {
   return (
     <div>
@@ -17,6 +17,15 @@ const GalleryPage = () => {
       <p className="text-center text-2xl my-5">Next js Image Component</p>
       <Image
         src="https://nextjs.org/api/docs-og?title=Components%20%3Cimage%3E"
+        alt="Next Image"
+        // fill
+        width={500}
+        height={500}
+        className="mx-auto"
+      />
+      <p className="text-center text-2xl my-5">Local Image</p>
+      <Image
+        src={nextImage}
         alt="Next Image"
         // fill
         width={500}
