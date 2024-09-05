@@ -1,23 +1,16 @@
-import Counter from "@/components/Counter/Counter";
+import Link from "next/link";
 
-const HomePage = async () => {
+const AllShoesPage = async () => {
   const res = await fetch("http://localhost:5000/shoes", {
-    next: {
-      revalidate: 5,
-    },
+    cache: "no-store",
   });
   const shoes = await res.json();
-
-  const err = "No Error";
-  if ((err = "Error Found")) throw new Error("Error from home page");
-
   return (
-    <div className="text-center mx-auto">
-      <h2 className="mt-52 text-4xl">Welcome to First Next App</h2>
-      <Counter />
-      <div className="flex justify-center gap-5 mt-32 px-5o">
-        {shoes?.slice(0, 3).map((shoe) => (
-          <div key={shoe?.id} className="card w-80 bg-base-100 shadow-xl">
+    <div>
+      <h2 className="text-center text-2xl">All Shoes</h2>
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
+        {shoes.map((shoe) => (
+          <div key={shoe?.id} className="card w-80 bg-base-100 p-5 shadow-xl">
             <figure>
               <img
                 src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
@@ -40,8 +33,12 @@ const HomePage = async () => {
           </div>
         ))}
       </div>
+
+      <Link className="flex justify-center mt-10" href="/all-shoes">
+        <button className="btn btn-secondary">See More</button>
+      </Link>
     </div>
   );
 };
 
-export default HomePage;
+export default AllShoesPage;

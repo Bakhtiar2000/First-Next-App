@@ -1,0 +1,40 @@
+{
+  "shoes": [
+    {
+      "id": 1,
+      "title": "Running Shoes",
+      "description": "Lightweight running shoes for everyday use.",
+      "price": 100
+    },
+    {
+      "id": 2,
+      "title": "Basketball Sneakers",
+      "description": "High-top sneakers with excellent ankle support.",
+      "price": 89.99
+    },
+    {
+      "id": 3,
+      "title": "Leather Boots",
+      "description": "Durable leather boots for hiking and outdoor adventures.",
+      "price": 120.0
+    },
+    {
+      "id": 4,
+      "title": "Casual Loafers",
+      "description": "Comfortable loafers perfect for casual wear.",
+      "price": 49.99
+    },
+    {
+      "id": 5,
+      "title": "Sandals",
+      "description": "Open-toe sandals for warm weather comfort.",
+      "price": 29.99
+    },
+    {
+      "id": 6,
+      "title": "Training Shoes",
+      "description": "Cross-training shoes suitable for gym workouts.",
+      "price": 64.99
+    }
+  ]
+}
